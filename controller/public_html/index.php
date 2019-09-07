@@ -5,6 +5,7 @@
 	$handler = new \App\Controller\Handler();
 	
 	$handler->render([
-		'tag'    => 'home'
+		'tag'    => 'home',
+		'title'  => 'MFCoin & Freeland'
 	]);
 	

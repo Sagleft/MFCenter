@@ -6,7 +6,8 @@
 	$err_code = \App\Model\Utilities::checkINT($_GET['code']);
 	
 	$handler->render([
-		'tag'  => 'error',
-		'code' => $err_code
+		'tag'   => 'error',
+		'title' => 'Ошибка',
+		'code'  => $err_code
 	]);
 	

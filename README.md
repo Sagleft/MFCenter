@@ -2,6 +2,7 @@
 
 ## Quick start
 
+```
 git clone https://github.com/Sagleft/MFCenter.git project
 cd project
 mkdir view/cache
@@ -13,6 +14,7 @@ cd controller/public_html
 cp example.htaccess .htaccess
 cd ../../tools
 sh get_depends.sh
+```
 
 ## Contribute
 

@@ -1,32 +1,8 @@
-# Blank MVC
+# MFCenter
 
-## Фичи
+## Quick start
 
-* разделение верстки и кода через twig-шаблоны;
-* подобие MVC структуры;
-* .ENV через dotenv;
-* мета-теги для превью в соцсетях;
-* что-то еще;
-
-## Требования
-* PHP 7.1;
-* Apache 2.6;
-
-# Логика проекта
-
-1. Подключаются библиотеки через composer;
-2. создается экземпляр Handler;
-3. Handler создает экземпляры Environment, Logic и User;
-4. Environment загружает данные из .env;
-5. Handler рендерит страницу через Render;
-6. Render обрабатывает запрошенный шаблон и через Twig выдает страницу.
-
-## Развертывание
-
-Пример для проекта с именем project:
-
-```
-git clone https://github.com/Sagleft/PHP-blank-MVC.git project
+git clone https://github.com/Sagleft/MFCenter.git project
 cd project
 mkdir view/cache
 chmod 777 view/cache
@@ -35,15 +11,14 @@ cp composer.json.example composer.json
 composer update
 cd controller/public_html
 cp example.htaccess .htaccess
-```
+cd ../../tools
+sh get_depends.sh
 
-Далее внесите изменения в .env
+## Contribute
 
-rpc_* параметры - на json-rpc подключение к *coind, например, MFCoin. Если необходимо.
-
-Directory: ``` controller\public_html ```.
-
+TODO
 
 ## Copyright
 
 Copyright (c) 2019 Sagleft.
+Copyright (c) 2019 Freeland Devs.

@@ -7,8 +7,7 @@ git clone https://github.com/Sagleft/MFCenter.git project
 cd project
 mkdir view/cache
 chmod 777 view/cache
-cp .env.example .env
-cp composer.json.example composer.json
+cp example.env .env
 composer update
 cd controller/public_html
 cp example.htaccess .htaccess

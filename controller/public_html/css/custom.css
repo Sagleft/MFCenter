@@ -1,26 +1,33 @@
+body {
+	background: black;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+}
+
 footer {
 	padding: 1rem;
 	color: #eceeec;
+	text-align: right;
+}
+
+footer a {
+	color: #ec5353;
+	font-weight: bold;
 }
 
 .white-wrap {
-	background-color: white;
+	background: white;
 }
 
-.dropdown-menu {
-	border: 0;
+.uk-navbar-nav {
+	font-weight: bold;
 }
 
-.dropdown-item:hover {
-	background-color: #dd3333;
-    color: white;
+.navbar-colored {
+	background: #d33 !important;
 }
 
-.nav-tabs {
-	display: block;
+.text-center {
 	text-align: center;
-}
-
-.nav-tabs > li {
-	display: inline-block;
 }

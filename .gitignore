@@ -14,3 +14,4 @@
 # other
 /resources/**
 /logs
+/controller/public_html/test_auth.php

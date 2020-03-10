@@ -1,21 +1,12 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" id="navbar1">
-	<div class="container">
-		<a class="navbar-brand mr-1 mb-1 mt-0" href="/">MFCenter</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="navbar-collapse collapse justify-content-center" id="collapsingNavbar">
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item">
-					<a class="nav-link" href="#navs">Element</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#navs">Element</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#navs">Element</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-</nav>
+<div class="uk-light">
+  <nav class="uk-navbar-container navbar-colored" uk-navbar>
+      <div class="uk-navbar-center">
+
+          <ul class="uk-navbar-nav">
+              <li{% if page.tag == 'home' %} class="uk-active"{% endif %}><a href="/">Home</a></li>
+              <li{% if page.tag == 'services' %} class="uk-active"{% endif %}><a href="/route/services">Services</a></li>
+              <li{% if page.tag == 'api' %} class="uk-active"{% endif %}><a href="/route/api">API</a></li>
+          </ul>
+      </div>
+  </nav>
+</div>

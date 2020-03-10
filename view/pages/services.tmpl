@@ -1,0 +1,10 @@
+<ul class="uk-list uk-list-divider">
+	{% for service in page.services %}
+		<li>
+			<span class="service-name"><b>{{ service.name }}</b></span>
+			<p>
+				<span uk-icon="info"></span> {{ service.info|raw }}
+			</p>
+		</li>
+	{% endfor %}
+</ul>

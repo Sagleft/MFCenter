@@ -1,10 +1,16 @@
 <ul class="uk-list uk-list-divider">
 	{% for service in page.services %}
-		<li>
+		<li class="service-section">
 			<span class="service-name"><b>{{ service.name }}</b></span>
 			<p>
 				<span uk-icon="info"></span> {{ service.info|raw }}
 			</p>
+			{% if service.active == true %}
+				<a class="uk-button uk-button-default" href="#">Использовать</a>
+			{% endif %}
+			{% if service.have_docs == true %}
+				<a class="uk-button uk-button-default" href="/docs/{{ service.docs_tag }}">Документация</a>
+			{% endif %}
 		</li>
 	{% endfor %}
 </ul>

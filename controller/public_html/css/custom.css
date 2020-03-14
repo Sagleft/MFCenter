@@ -31,3 +31,7 @@ footer a {
 .text-center {
 	text-align: center;
 }
+
+.service-section > p {
+	margin-bottom: 0.5rem!important;
+}

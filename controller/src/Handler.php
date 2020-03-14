@@ -10,6 +10,7 @@
 		protected $db      = null;
 		protected $enviro  = null;
 		protected $mfcoin_services = [];
+		protected $mfcoin_client   = null;
 
 		public function __construct() {
 			$this->enviro  = new \App\Model\Environment();
@@ -24,8 +25,13 @@
 			$this->logic->setUser($this->user);
 
 			$this->mfcoin_services = [
-				new \App\Model\Services\NVSService(),
-				new \App\Model\Services\AbstractService()
+				//new \App\Model\Services\NVSService(),
+				//new \App\Model\Services\AbstractService(),
+				new \App\Model\Services\DataStorageService(),
+				new \App\Model\Services\DPOService(),
+				new \App\Model\Services\DNSService(),
+				new \App\Model\Services\FileStorageService(),
+				new \App\Model\Services\EncryptedStorageService(),
 			];
 		}
 
@@ -35,13 +41,21 @@
 		}
 
 		public function getServicesNamesList() {
-			$services_names = [];
+			$services = [];
 			for($i = 0; $i < count($this->mfcoin_services); $i++) {
-				$services_names[] = [
-					'name' => $this->mfcoin_services[$i]->name,
-					'info' => wordwrap($this->mfcoin_services[$i]->info, 170, '<br/>'),
-				];
+					$services[] = $this->mfcoin_services[$i]->getServiceInfo();
 			}
-			return $services_names;
+			return $services;
+		}
+
+		public function initClient(): bool {
+			$this->mfcoin_client = new \MFCoin\Client(
+				getenv('rpc_user'), getenv('rpc_password')
+			);
+			if($this->mfcoin_client->error) {
+				$this->last_error = $this->mfcoin_client->error;
+				return false;
+			}
+			return true;
 		}
 	}

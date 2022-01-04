@@ -23,3 +23,9 @@ TODO
 
 Copyright (c) 2019 Sagleft.
 Copyright (c) 2019 Freeland Devs.
+
+---
+
+![image](https://github.com/Sagleft/Sagleft/raw/master/image.png)
+
+### :globe_with_meridians: [Telegram канал](https://t.me/+VIvd8j6xvm9iMzhi)
